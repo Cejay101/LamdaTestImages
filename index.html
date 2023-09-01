@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>body{
+background-color: #f0f8ff;
+color: black;
+}
+
+
+div{
+margin: 3rem;
+}
+
+
+div:has(.my-class) {
+color: rgb(255, 0, 0);
+}
+
+
+div:has(span) {
+color: rgb(0, 0, 255);
+}
+div:has(*) {
+border: 1px solid rgb(255, 0, 0);
+}
+
+
+div:has(p ){
+font-size: 1.5rem;
+}
+@supports not (selector(html:has(body))) {
+body:before {
+padding: 1rem;
+color: rgb(255, 0, 0);
+display: block;
+content: "Your browser doesn't support the `:has()` pseudo-class yet.";
+}
+}</style>
+</head>
+<body>
+<div>
+<span class="my-class">This div has a span child element with the class my-class.</span>
+</div>
+<div>
+<span>
+
+
+This div has a span child element, but the span element does not have the class my-class.
+</span>
+</div>
+<div>
+This div does not have any child elements.
+</div>
+<div>
+<span>This div has a span child element, but it is not the only child element.</span>
+<span>This is another child element.</span>
+</div>
+<div>
+<span>This div has a span child element, but it is not the only child element.</span>
+<p>This is another child element.</p>
+</div>
+</body>
+
+</html>
+
