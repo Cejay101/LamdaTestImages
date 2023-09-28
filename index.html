@@ -4,65 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>body{
-background-color: #f0f8ff;
-color: black;
-}
-
-
-div{
-margin: 3rem;
-}
-
-
-div:has(.my-class) {
-color: rgb(255, 0, 0);
-}
-
-
-div:has(span) {
-color: rgb(0, 0, 255);
-}
-div:has(*) {
-border: 1px solid rgb(255, 0, 0);
-}
-
-
-div:has(p ){
-font-size: 1.5rem;
-}
-@supports not (selector(html:has(body))) {
-body:before {
-padding: 1rem;
-color: rgb(255, 0, 0);
-display: block;
-content: "Your browser doesn't support the `:has()` pseudo-class yet.";
-}
-}</style>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<div>
-<span class="my-class">This div has a span child element with the class my-class.</span>
+  <nav>
+    <h3><a href="https://www.lambdatest.com/"><img class="logo" src="https://www.lambdatest.com/resources/images/logos/logo.svg" alt="logo"></a></h3>
+    <ul class="nav-items">
+      <li><a href="https://www.lambdatest.com/feature">Platform</a></li>
+      <li><a href="https://www.lambdatest.com/enterprise">Enterprise</a></li>
+      <li><a href="https://www.lambdatest.com/blog/">Resources</a></li>
+      <li><a href="https://www.lambdatest.com/support/docs/getting-started-with-lambdatest-automation/">Developers</a></li>
+      <li><a href="https://www.lambdatest.com/pricing">Pricing</a></li>
+    </ul>
+    <img class="hamburger" src="https://www.lambdatest.com/resources/images/icons/toggle_menu.svg" alt="">
+  </nav>
+  <div class="signup">
+    <div class="lamdatest-info">
+<h3>With your new LambdaTest Account, you get:</h3>
+<div class="offer">
+  <p>&check;</p>
+  <div><h4>3000+ Browsers, OS, & Real Devices</h4>
+  <p>Run manual and automated tests of web and mobile apps across 3000+ different browsers, real devices, and OS environments.</p></div>
 </div>
-<div>
-<span>
+<div class="offer">
+  <p>&check;</p>
+  <div><h4>70% Faster Test Execution</h4>
+  <p>LambdaTest's HyperExecute is up to 70% faster than any traditional cloud-based Selenium Grid.</p></div>
+</div>
+<div class="offer">
+  <p>&check;</p>
+  <div><h4>3000+ Browsers, OS, & Real Devices</h4>
+  <p>Test smarter with AI-powered test insights to help you anticipate and mitigate future issues before they take root.</p></div>
+</div>
+<p>Trusted by 2 Million+ users globally at:</p>
 
-
-This div has a span child element, but the span element does not have the class my-class.
-</span>
+<div class="companies">
+  <img src="https://accounts.lambdatest.com/icons/logos/logo1.svg" alt="">
+  <img src="https://accounts.lambdatest.com/icons/logos/logo2.svg" alt="">
+  <img src="https://accounts.lambdatest.com/icons/logos/logo3.svg" alt="">
+  <img src="https://accounts.lambdatest.com/icons/logos/logo4.svg" alt="">
+  <img src="https://accounts.lambdatest.com/icons/logos/logo5.svg" alt="">
 </div>
-<div>
-This div does not have any child elements.
-</div>
-<div>
-<span>This div has a span child element, but it is not the only child element.</span>
-<span>This is another child element.</span>
-</div>
-<div>
-<span>This div has a span child element, but it is not the only child element.</span>
-<p>This is another child element.</p>
-</div>
+     
+    </div>
+    <form class="form">
+      <h2>Get started for free</h2>
+      
+    <div class="platforms">
+     <a href="https://accounts.google.com/o/oauth2/auth/oauthchooseaccount?client_id=706758774682-bjrjup3sgcqmqm1n4dq62pk72mvu8mhn.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Faccounts.lambdatest.com%2Flogin%2Fgoogle%2Fcallback&scope=openid%20profile%20email&response_type=code&state=Kz4s0sM1i5Sa8v74vOBkteLIljh1cDn4YQpcvnSG&service=lso&o2v=1&theme=glif&flowName=GeneralOAuthFlow" class="rainbow-button" target="_blank" > <img src="./images/google-color-svgrepo-com.svg" alt="google icon">Sign up with Google</a> 
+      <a href="https://github.com/login/oauth/authorize?client_id=b41139b9749e27d4487b&redirect_uri=https%3A%2F%2Faccounts.lambdatest.com%2Flogin%2Fgithub%2Fcallback%2Fv1&scope=user%3Aemail&response_type=code&state=mA5eziVBDxkmH1LwCJT9k1uID3mSVm3W8Jf8ohJo" class="rainbow-button" target="_blank"><img src="./images/github-142-svgrepo-com.svg" alt="Github icon">Sign up with Github</a>
+    </div>
+    <div class="alt-text"><div></div><p>OR SIGNUP VIA MAIL</p><div></div></div>
+      <div class="field">
+        <label for="name">Name </label>
+        <input type="name" id="name"  placeholder="e.g Clinton joy"/>
+      </div>
+      
+      <div class="field">
+        <label for="email">Business Email</label>
+        <input type="email" id="email"  placeholder="e.g clinton@gmail.com"/>
+      </div>
+      <div class="field">
+        <label for="password">Desired Password</label>
+        <input type="password" id="password"  />
+      </div>
+      <div>
+        <button>SIGN UP</button>
+      </div>
+      <p>By clicking Sign Up or registering through a third party you accept the LambdaTest  <a href="https://www.lambdatest.com/legal/terms-of-service">Terms of Service </a>and acknowledge the <a href="https://www.lambdatest.com/legal/privacy">Privacy Policy</a> and <a href="https://www.lambdatest.com/legal/cookie">Cookie Policy</a></p>
+      <p class="signin-text">Already have an account? <a class="sign-in" href="https://accounts.lambdatest.com/login?_gl=1*cz6gbh*_gcl_au*MTU1OTQzNjIzMS4xNjg5ODI4OTQ5">Sign In</a></p>
+      </form>
+  </div>
 </body>
-
 </html>
-
